@@ -5,3 +5,30 @@
   height: 80px;
 }
 
+.p-card {
+  padding: 0px;
+}
+
+.card-header {
+  // margin-top: 20px;
+  padding-top: 20px;
+  border-top: 3px solid #666;
+}
+
+.p-card_content {
+  margin: 1rem;
+}
+
+.p-card_header {
+  border-top: 3px solid #666;
+  // margin: 0rem 1rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
+}
+
+.p-card_footer {
+  margin: 1rem;
+}
+
+
+

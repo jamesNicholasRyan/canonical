@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card } from '@canonical/react-components'
+import { Card as div } from '@canonical/react-components'
 
 export default function Cards({ blogPostData }) {
 
@@ -14,22 +14,37 @@ export default function Cards({ blogPostData }) {
           let title = post.title.rendered
           if (title.length > 47) title = title.substring(0, 47) + ' ...'
 
-          return <Card
-              className = "col-4"
+          return <div
+              className = "col-4 p-card"
               key={index}
               // title={post.title.rendered}
               // thumbnail={image ? image : 'image not available'}
               highlighted
             >
               {/* {console.log(post._embedded['wp:featuredmedia'].[0].source_url)} */}
-              <p className="p-muted-heading--6">CLOUD AND SERVER</p>
-              <hr></hr>
-              <img src={image} alt={altText}></img>
-              <p className="p-heading--3 blog-title" style={{'font-weight': '500'}}><a href={post.link}>{title}</a></p>
-              <p className="p-heading--5"><i>By <a href={post._embedded.author[0].link}>{post._embedded.author[0].name}</a> on {date}</i></p>
-              <hr></hr>
-              <p>Article</p>
-            </Card>
+              <header className="p-card_header">
+                <p className="p-muted-heading">CLOUD AND SERVER</p>
+                <hr></hr>
+              </header>
+
+              <div className="p-card_content">
+                <a href={post.link}>
+                  <img src={image} alt={altText}></img>
+                </a>
+                <p className="p-heading--3 blog-title" style={{'font-weight': '300'}}>
+                  <a href={post.link}>{title}</a>
+                </p>
+                <p className="p-heading--5" style={{'font-weight': '300'}}>
+                  <i>By <a href={post._embedded.author[0].link}>{post._embedded.author[0].name}</a> on {date}</i>
+                </p>
+              </div>
+              
+              <div className="p-card_footer">
+                <hr></hr>
+                <p>Article</p>
+              </div>
+              
+            </div>
         })}
     </div>
   }
