@@ -1,2 +1,0 @@
-(this.webpackJsonpcanonicaltest=this.webpackJsonpcanonicaltest||[]).push([[0],{10:function(e,n,t){"use strict";t.r(n);var c=t(1),a=t.n(c),s=t(3),r=t.n(s),i=(t(8),t(0));var o=function(){return Object(i.jsx)("div",{className:"App",children:Object(i.jsx)("header",{className:"App-header",children:"Canonical Test..."})})};r.a.render(Object(i.jsx)(a.a.StrictMode,{children:Object(i.jsx)(o,{})}),document.getElementById("root"))},8:function(e,n,t){}},[[10,1,2]]]);
-//# sourceMappingURL=main.1404f296.chunk.js.map
