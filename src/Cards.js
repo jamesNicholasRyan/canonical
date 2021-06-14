@@ -3,8 +3,6 @@ import { Card as div } from '@canonical/react-components'
 
 export default function Cards({ blogPostData }) {
 
-  console.log(blogPostData)
-
   function mapCards() {
     return <div className = "row">
         {blogPostData.map((post, index) => {
@@ -14,14 +12,7 @@ export default function Cards({ blogPostData }) {
           let title = post.title.rendered
           if (title.length > 47) title = title.substring(0, 47) + ' ...'
 
-          return <div
-              className = "col-4 p-card"
-              key={index}
-              // title={post.title.rendered}
-              // thumbnail={image ? image : 'image not available'}
-              highlighted
-            >
-              {/* {console.log(post._embedded['wp:featuredmedia'].[0].source_url)} */}
+          return <div className = "col-4 p-card" key={index} >
               <header className="p-card_header">
                 <p className="p-muted-heading">CLOUD AND SERVER</p>
                 <hr></hr>
@@ -34,7 +25,7 @@ export default function Cards({ blogPostData }) {
                 <p className="p-heading--3 blog-title" style={{'font-weight': '300'}}>
                   <a href={post.link}>{title}</a>
                 </p>
-                <p className="p-heading--5" style={{'font-weight': '300'}}>
+                <p className="p-heading--5 author" style={{'font-weight': '300'}}>
                   <i>By <a href={post._embedded.author[0].link}>{post._embedded.author[0].name}</a> on {date}</i>
                 </p>
               </div>

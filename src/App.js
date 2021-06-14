@@ -12,12 +12,9 @@ function App() {
         setBlogPostData(resp.data)
       })
   }, [])
-    
-  // console.log(blogPostData)
 
   return <div className="section">
       <div className="container">
-        Canonical Test... 
         <Cards
           blogPostData={blogPostData}
         />
